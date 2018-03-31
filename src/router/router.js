@@ -221,6 +221,17 @@ export const appRouter = [
         children: [
             { path: 'index', title: '错误页面', name: 'errorpage_index', component: () => import('@/views/error-page/error-page.vue') }
         ]
+    },
+    {
+        path: '/crud-demo',
+        name: 'crud-demo',
+        icon: 'ios-list-outline',
+        title: 'CRUD示例',
+        component: Main,
+        children: [
+            { path: 'user-manager', title: '用户管理', icon: 'ios-personadd-outline', name: 'user-manager', component: () => import('@/views/crud-demo/user-manager.vue') },
+            { path: 'placeholder', title: '白板占位', icon: 'android-checkbox-outline-blank', name: 'placeholder', component: () => import('@/views/crud-demo/placeholder.vue') }
+        ]
     }
 ];
 
